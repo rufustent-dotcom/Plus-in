@@ -1,0 +1,24 @@
+def pattern_analyzer(data):
+    """
+    Analyze information and find meaningful patterns.
+    """
+
+    patterns = []
+
+    # Look for repeated concepts
+    concepts = extract_concepts(data)
+
+    for concept in concepts:
+        frequency = concepts.count(concept)
+
+        if frequency > 1:
+            patterns.append({
+                "pattern": concept,
+                "strength": frequency
+            })
+
+    return {
+        "patterns_found": patterns,
+        "confidence": calculate_confidence(patterns),
+        "missing_information": find_gaps(data)
+    }
