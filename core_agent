@@ -1,0 +1,17 @@
+                 CORE AGENT
+
+                      |
+ ------------------------------------------------
+ |              |              |                 |
+Research    Patterns       Memory          Simulation
+Collector   Analyzer       Tracker          Engine
+
+                      |
+                      v
+
+              Strategy Generator
+
+                      |
+                      v
+
+               Real-world action
