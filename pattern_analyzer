@@ -16,7 +16,23 @@ def pattern_analyzer(data):
                 "pattern": concept,
                 "strength": frequency
             })
-
+the output should look something like:
+{
+  "patterns_found": [
+    {
+      "pattern": "users want dynamic puzzle assembly",
+      "strength": 9
+    },
+    {
+      "pattern": "visual feedback increases engagement",
+      "strength": 7
+    }
+  ],
+  "missing_information": [
+    "retention strategy",
+    "scoring system"
+  ]
+}
     return {
         "patterns_found": patterns,
         "confidence": calculate_confidence(patterns),
