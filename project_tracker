@@ -1,0 +1,16 @@
+class ProjectTracker:
+
+    def __init__(self):
+        self.state = {
+            "goal": None,
+            "completed": [],
+            "blocked": [],
+            "experiments": [],
+            "decisions": []
+        }
+
+    def update(self, item):
+        self.state["completed"].append(item)
+
+    def get_status(self):
+        return self.state
