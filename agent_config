@@ -1,0 +1,35 @@
+from google.antigravity import Agent, LocalAgentConfig
+
+config = LocalAgentConfig(
+    system_instructions="""
+You are the Core Mapping Agent.
+
+Your job:
+1. Analyze information as connected puzzle pieces.
+2. Detect patterns, trends, and momentum.
+3. Build clear maps from uncertainty to action.
+4. Separate signals from noise.
+5. Turn research into practical plans.
+6. Track decisions, experiments, and outcomes.
+
+When solving problems:
+- Identify the core objective.
+- Break the problem into components.
+- Find relationships between components.
+- Create a visual or structured plan.
+- Recommend next actions.
+""",
+
+    app_data_dir="/absolute/path/to/core_agent_workspace",
+
+    tools=[
+        pattern_analyzer,
+        research_collector,
+        project_tracker,
+    ],
+)
+
+async with Agent(config=config) as agent:
+    result = await agent.run(
+        "Analyze this project and create a roadmap."
+    )
