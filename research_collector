@@ -1,0 +1,13 @@
+async def research_collector(topic):
+    """
+    Collect research around a topic.
+    """
+
+    results = await search(topic)
+
+    return {
+        "topic": topic,
+        "sources": results,
+        "summary": summarize(results),
+        "key_points": extract_key_points(results)
+    }
